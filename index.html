@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parderutas | Brechas, cenotes y aventura desde Mérida</title>
+<meta name="description" content="Alan y Ale recorren en bici de montaña las brechas de Yucatán y exploran sus cenotes. Videos de aventura y naturaleza.">
+<meta property="og:title" content="parderutas">
+<meta property="og:description" content="Brechas, cenotes y aventura desde Mérida, Yucatán.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --selva:#14261F; --selva-2:#1F3A2F; --cenote:#2EC4B6;
+    --atardecer:#F28C38; --arena:#F2EADB;
+    --display:'Barlow Condensed','Arial Narrow',sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--selva);color:var(--arena);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--cenote);outline-offset:3px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* Hero */
+  .hero{min-height:92vh;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:24px;padding:48px 0}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(3.8rem,13vw,8.5rem);line-height:.9;letter-spacing:.01em}
+  .hero p.lead{margin-top:20px;font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:30ch;color:rgba(242,234,219,.85)}
+  .tracks{width:100%;max-width:300px;justify-self:center}
+  .tracks path{fill:none;stroke-width:7;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 2.6s cubic-bezier(.5,0,.2,1) .3s forwards}
+  .tracks path:nth-child(2){animation-delay:.6s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+
+  /* Redes */
+  .links{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding-bottom:72px}
+  .link{display:flex;flex-direction:column;gap:2px;padding:20px 22px;border:1.5px solid rgba(242,234,219,.22);border-radius:14px;text-decoration:none;transition:border-color .2s,background .2s}
+  .link:hover{border-color:var(--cenote);background:var(--selva-2)}
+  .link b{font-family:var(--display);font-size:1.7rem;font-weight:600;line-height:1.1}
+  .link span{font-size:.92rem;color:rgba(242,234,219,.7)}
+  .link.main{grid-column:1/-1;background:var(--atardecer);border-color:var(--atardecer);color:var(--selva)}
+  .link.main span{color:rgba(20,38,31,.8)}
+  .link.main:hover{background:#ffa056;border-color:#ffa056}
+
+  /* Secciones */
+  section{padding:56px 0;border-top:1px solid rgba(242,234,219,.14)}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,2.8rem);margin-bottom:14px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .two p{max-width:52ch;color:rgba(242,234,219,.88)}
+  .soon{padding:28px;border-radius:14px;background:var(--selva-2);color:rgba(242,234,219,.85)}
+  .soon b{color:var(--cenote)}
+  footer{padding:40px 0 56px;border-top:1px solid rgba(242,234,219,.14);font-size:.95rem;color:rgba(242,234,219,.7)}
+  footer a{color:var(--cenote)}
+
+  @media (max-width:720px){
+    .hero{grid-template-columns:1fr;min-height:auto;padding-top:32px}
+    .tracks{max-width:150px;justify-self:start;order:-1}
+    .links{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr;gap:24px}
+  }
+  @media (prefers-reduced-motion:reduce){.tracks path{animation:none;stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <h1>parde<br>rutas</h1>
+      <p class="lead">Brechas, cenotes y aventura desde Mérida, Yucatán.</p>
+    </div>
+    <svg class="tracks" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M22 98 C22 76 52 72 42 52 S32 26 50 14" stroke="#2EC4B6"/>
+      <path d="M38 98 C38 76 68 72 58 52 S48 26 66 14" stroke="#F28C38"/>
+    </svg>
+  </header>
+
+  <nav class="links" aria-label="Redes sociales">
+    <!-- TODO: reemplaza los # por tus URLs reales -->
+    <a class="link main" href="#" target="_blank" rel="noopener"><b>YouTube</b><span>Los videos completos, en la mejor calidad</span></a>
+    <a class="link" href="#" target="_blank" rel="noopener"><b>TikTok</b><span>Cortos de cada salida</span></a>
+    <a class="link" href="#" target="_blank" rel="noopener"><b>Instagram</b><span>Fotos y momentos del camino</span></a>
+    <a class="link" href="#" target="_blank" rel="noopener"><b>Facebook</b><span>Comunidad y novedades</span></a>
+  </nav>
+
+  <section>
+    <h2>Lo que grabamos</h2>
+    <div class="two">
+      <p>Salimos en bici de montaña por las brechas de Yucatán: caminos de tierra blanca entre selva baja, con tramos técnicos y mucha naturaleza. De vez en cuando nos vamos a otros municipios por subidas y bajadas más exigentes.</p>
+      <p>También bajamos a los cenotes a hacer apnea. No es lo más frecuente, pero va a ir apareciendo. Todo lo grabamos para verse bien: con calma, buena luz y cuidado en la edición.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Primer video</h2>
+    <div class="soon"><b>Muy pronto.</b> Estamos terminando la edición de la primera salida. Síguenos en YouTube para verla cuando salga.</div>
+  </section>
+
+  <section>
+    <h2>Quiénes somos</h2>
+    <div class="two">
+      <p>Somos Alan y Ale, una pareja de Mérida a la que le gusta salir a pedalear y descubrir rincones de Yucatán. Por eso el nombre: un par, y sus rutas.</p>
+      <p>¿Quieres colaborar o invitarnos a una ruta? Escríbenos a <a href="mailto:hola@parderutas.com">hola@parderutas.com</a>.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">© <span id="y">2026</span> parderutas. Mérida, Yucatán.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
